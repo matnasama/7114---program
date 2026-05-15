@@ -1,0 +1,3 @@
+La cantidad de aprobados es: 4
+La cantidad de desaprobados es: 3
+El promedio general es: 5.714285714285714

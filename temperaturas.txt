@@ -1,0 +1,3 @@
+Los dias calurosos son: 6
+Los dias no calurosos son: 4
+La temperatura promedio es: 29.9
