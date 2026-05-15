@@ -23,10 +23,14 @@ productos = pedir_productos(productos)
 cantidad, alfabetico = analizar_productos(productos)
 
 def guardar_reporte(productos, cantidad, alfabetico):
-    archivo = open("inventario.txt", "w")
-    archivo.write(f"La lista de productos es: {productos}\n")
-    archivo.write(f"La cantidad de productos es: {cantidad}\n")
-    archivo.write(f"El primer de producto es: {alfabetico}\n")
-    archivo.close()
+
+    try:
+        with open("inventario.txt", "w", encoding="utf-8") as archivo:
+            archivo.write(f"La lista de productos es: {productos}\n")
+            archivo.write(f"La cantidad de productos es: {cantidad}\n")
+            archivo.write(f"El primer de producto es: {alfabetico}\n")
+        print("El informe se guardó correctamente en inventario.txt")
+    except OSError as error:
+        print(f"Error al guardar el informe: {error}")
 
 guardar_reporte(productos, cantidad, alfabetico)

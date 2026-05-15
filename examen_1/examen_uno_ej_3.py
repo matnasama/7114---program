@@ -2,9 +2,10 @@
 # pide 5 notas al usuario y las devuelve en una lista
 def pedir_notas():
     notas = []
+    
     for i in range(5):
-        nota =  int(input("Ingresa una nota:"))
-        notas.append(nota)
+        i = int(input("Ingresa una nota: "))
+        notas.append(i)
     return notas
 
 # recibe la lista y devuelve el promedio
@@ -54,15 +55,18 @@ def mostrar_informe(notas, aprobados, desaprobados, promedio, aprobados_count, d
     print(f"Cantidad de aprobados: {aprobados_count}")
     print(f"Cantidad de desaprobados: {desaprobados_count}")
 
+    estado = "aprueba" if promedio >= 6 else "no aprueba"
+
+    try:
+        with open("resultado.txt", "w", encoding="utf-8") as archivo:
+            archivo.write(f"Promedio general: {promedio}\n")
+            archivo.write(f"Estado del alumno: {estado}\n")
+        print("El informe se guardó correctamente en resultado.txt")
+    except OSError as error:
+        print(f"No se pudo crear resultado.txt: {error}")
+
+
 mostrar_informe(notas, aprobados, desaprobados, promedio, aprobados_count, desaprobados_count)
-archivo = open("resultado.txt", "w")
-archivo.write(f"las notas ingresadas son {notas}\n")
-archivo.write(f"los aprobados son {aprobados}\n")
-archivo.write(f"los desaprobados son {desaprobados}\n")
-archivo.write(f"el promedio es general es {promedio}\n")
-archivo.write(f"Cantidad de aprobados: {aprobados_count}\n")
-archivo.write(f"Cantidad de desaprobados: {desaprobados_count}\n")
-archivo.close()
 
 
 
