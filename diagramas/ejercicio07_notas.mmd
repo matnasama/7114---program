@@ -1,0 +1,12 @@
+flowchart TD
+    A([INICIO]) --> B["notas = lista vacia"]
+    B --> C["i = 1"]
+    C --> D{¿i <= 5?}
+    D -->|Si| E["Pedir nota del alumno i"]
+    E --> F["Agregar nota a lista"]
+    F --> G["i = i + 1"]
+    G --> D
+    D -->|No| H["Mostrar todas las notas"]
+    H --> I["Contar notas >= 6"]
+    I --> J["Mostrar cantidad"]
+    J --> K([FIN])

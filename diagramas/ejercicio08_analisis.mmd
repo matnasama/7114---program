@@ -1,0 +1,12 @@
+flowchart TD
+    A([INICIO]) --> B["Tener lista de numeros"]
+    B --> C["suma = 0, maximo = primer valor"]
+    C --> D["Para cada numero en lista"]
+    D --> E["suma = suma + numero"]
+    E --> F{¿numero > maximo?}
+    F -->|Si| G["maximo = numero"]
+    F -->|No| H["Siguiente"]
+    G --> H
+    H --> I["promedio = suma / cantidad"]
+    I --> J["Mostrar suma, promedio, maximo"]
+    J --> K([FIN])

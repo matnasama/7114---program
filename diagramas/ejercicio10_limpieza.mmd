@@ -1,0 +1,11 @@
+flowchart TD
+    A([INICIO]) --> B["Tener lista de numeros"]
+    B --> C["nueva_lista = lista vacia"]
+    C --> D["Para cada numero en lista"]
+    D --> E{¿Numero >= 0?}
+    E -->|Si| F["Agregar a nueva_lista"]
+    E -->|No| G["Ignorar"]
+    F --> H["Siguiente"]
+    G --> H
+    H --> I["Mostrar nueva_lista"]
+    I --> J([FIN])

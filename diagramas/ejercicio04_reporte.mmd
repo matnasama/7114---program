@@ -1,0 +1,11 @@
+flowchart TD
+    A([INICIO]) --> B["i = 1"]
+    B --> C{¿i <= 20?}
+    C -->|Si| D["Mostrar: i"]
+    D --> E{¿i es par?}
+    E -->|Si| F["Resaltar en lista de pares"]
+    E -->|No| G["Siguiente"]
+    F --> G
+    G --> H["i = i + 1"]
+    H --> C
+    C -->|No| I([FIN])

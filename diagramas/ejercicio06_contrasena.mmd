@@ -1,0 +1,8 @@
+flowchart TD
+    A([INICIO]) --> B["contrasena_correcta = admin123"]
+    B --> C["Pedir contrasena"]
+    C --> D{¿Contrasena correcta?}
+    D -->|No| E["Pedir nueva contrasena"]
+    E --> D
+    D -->|Si| F["Mostrar: Acceso concedido"]
+    F --> G([FIN])

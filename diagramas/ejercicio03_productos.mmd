@@ -1,0 +1,12 @@
+flowchart TD
+    A([INICIO]) --> B["Pedir precio 1"]
+    B --> C["Pedir precio 2"]
+    C --> D{¿Precio1 == Precio2?}
+    D -->|Si| E["Mostrar: Mismo precio"]
+    D -->|No| F{¿Precio1 > Precio2?}
+    F -->|Si| G["Mostrar: Producto 1 es mas caro"]
+    F -->|No| H["Mostrar: Producto 2 es mas caro"]
+    E --> I["Mostrar diferencia"]
+    G --> I
+    H --> I
+    I --> J([FIN])

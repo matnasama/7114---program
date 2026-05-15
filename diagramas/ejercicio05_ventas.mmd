@@ -1,0 +1,10 @@
+flowchart TD
+    A([INICIO]) --> B["total = 0, cantidad = 0"]
+    B --> C["Pedir monto"]
+    C --> D{¿Monto == 0?}
+    D -->|No| E["total = total + monto"]
+    E --> F["cantidad = cantidad + 1"]
+    F --> C
+    D -->|Si| G["Mostrar cantidad"]
+    G --> H["Mostrar total"]
+    H --> I([FIN])

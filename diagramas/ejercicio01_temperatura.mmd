@@ -1,0 +1,10 @@
+flowchart TD
+    A([INICIO]) --> B["Pedir temperatura"]
+    B --> C{¿Temp < 0?}
+    C -->|Si| D["Mostrar: Bajo cero"]
+    C -->|No| E{¿Temp <= 25?}
+    E -->|Si| F["Mostrar: Templada"]
+    E -->|No| G["Mostrar: Alta"]
+    D --> H([FIN])
+    F --> H
+    G --> H

@@ -1,0 +1,12 @@
+flowchart TD
+    A([INICIO]) --> B["Tener matriz de numeros"]
+    B --> C["Para cada fila"]
+    C --> D["Para cada columna"]
+    D --> E{"¿valor > 10?"}
+    E -->|Si| F["Mostrar valor"]
+    E -->|No| G["Ignorar"]
+    F --> H["Siguiente elemento"]
+    G --> H
+    H --> I{"¿Hay mas elementos?"}
+    I -->|Si| D
+    I -->|No| J([FIN])

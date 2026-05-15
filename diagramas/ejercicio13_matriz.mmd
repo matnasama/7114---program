@@ -1,0 +1,12 @@
+flowchart TD
+    A([INICIO]) --> B["Tener matriz 3x3"]
+    B --> C["Para cada fila i"]
+    C --> D["Para cada columna j"]
+    D --> E["Mostrar matriz[i][j]"]
+    E --> F["Siguiente columna"]
+    F --> G{¿Fin de fila?}
+    G -->|Si| H["Salto de linea"]
+    H --> I{¿Hay mas filas?}
+    I -->|Si| C
+    I -->|No| J([FIN])
+    G -->|No| D

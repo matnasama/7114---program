@@ -1,0 +1,25 @@
+flowchart TD
+    A([Inicio]) --> B[Inicializar lista numeros vacia]
+    B --> C[Abrir archivo numeros.txt en modo lectura]
+    C --> D{Hay otra linea en el archivo?}
+
+    D -- Si --> E[Quitar espacios y salto de linea]
+    E --> F{Linea distinta de vacia?}
+    F -- Si --> G[Convertir a entero y agregar a numeros]
+    F -- No --> D
+    G --> D
+
+    D -- No --> H[Cerrar archivo]
+    H --> I{len(numeros) > 0?}
+
+    I -- Si --> J[Mostrar: Numeros registrados]
+    J --> K[Recorrer numeros e imprimir cada n]
+    K --> L[Inicializar suma = 0]
+    L --> M[Recorrer numeros y acumular suma = suma + n]
+    M --> N[Calcular promedio = suma / len(numeros)]
+    N --> O[Mostrar suma]
+    O --> P[Mostrar promedio]
+    P --> Q([Fin])
+
+    I -- No --> R[Mostrar: No hay numeros en numeros.txt]
+    R --> Q

@@ -1,0 +1,15 @@
+flowchart TD
+    A((INICIO)) --> B["numeros = lista vacia"]
+    B --> C[/Pedir numero/]
+    C --> D{"¿Numero == 0?"}
+    D -->|No| E["Agregar a lista"]
+    E --> C
+    D -->|Si| F["positivos = lista vacia"]
+    F --> G["Para cada numero en numeros"]
+    G --> H{"¿Numero > 0?"}
+    H -->|Si| I["Agregar a positivos"]
+    H -->|No| J["Siguiente"]
+    I --> J
+    J --> K[/Mostrar lista completa/]
+    K --> L[/Mostrar solo positivos/]
+    L --> M((FIN))

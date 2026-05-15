@@ -1,0 +1,10 @@
+flowchart TD
+    A([INICIO]) --> B["Pedir edad"]
+    B --> C{¿Edad < 18?}
+    C -->|Si| D["Mostrar: Acceso denegado"]
+    C -->|No| E{¿Edad <= 64?}
+    E -->|Si| F["Mostrar: Acceso permitido"]
+    E -->|No| G["Mostrar: Acceso prioritario"]
+    D --> H([FIN])
+    F --> H
+    G --> H

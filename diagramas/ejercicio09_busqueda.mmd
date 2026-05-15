@@ -1,0 +1,14 @@
+flowchart TD
+    A([INICIO]) --> B["Tener lista de productos"]
+    B --> C["Pedir producto a buscar"]
+    C --> D["encontrado = falso"]
+    D --> E["Para cada producto en lista"]
+    E --> F{¿Producto == buscado?}
+    F -->|Si| G["encontrado = verdadero"]
+    F -->|No| H["Siguiente"]
+    G --> H
+    H --> I{¿encontrado?}
+    I -->|Si| J["Mostrar: Existe"]
+    I -->|No| K["Mostrar: No existe"]
+    J --> L([FIN])
+    K --> L
