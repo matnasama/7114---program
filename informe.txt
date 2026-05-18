@@ -1,3 +1,0 @@
-los numeros son [2, 5, 8, 12, 7, 3]
-la cantidad de numeros es 6
-el mayor de los numeros es 12

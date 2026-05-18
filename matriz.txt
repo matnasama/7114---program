@@ -1,0 +1,7 @@
+La matriz es: [[7, 4, 1], [8, 5, 2], [9, 6, 3]]
+El promedio es: 5.0
+La diagonal principal es: 7, 5, 3
+La matriz representada en filas es:
+7 4 1 
+8 5 2 
+9 6 3 

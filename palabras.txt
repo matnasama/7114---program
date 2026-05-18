@@ -1,2 +1,0 @@
-La cantidad de palabras es: 5
-La palabra mas larga es: benedetto

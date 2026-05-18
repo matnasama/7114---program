@@ -1,2 +1,0 @@
-El promedio del estudiante es: 6.8
-Resultado de la asignatura: aprueba

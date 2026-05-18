@@ -1,3 +1,0 @@
-La lista de productos es: ['caca', 'perro', 'ola', 'tomasa', 'puerrielornitorrinco']
-La cantidad de productos es: 5
-El primer de producto es: caca
