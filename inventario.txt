@@ -1,0 +1,3 @@
+Los productos son los siguientes: ['pelo', 'pelota', 'paleta', 'asai', 'bi']
+La cantidad de productos en la lista es: 5
+El primero de los productos alfabeticamente es: bi
